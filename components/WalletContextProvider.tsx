@@ -10,6 +10,7 @@ const WalletContextProvider: FC<{ children: ReactNode }> = ({ children }) => {
     const wallets = [new PhantomWalletAdapter()]
 
     const endpoint = web3.clusterApiUrl('devnet')
+    console.log(`Connected to solana network: ${endpoint}`);
 
     return (
         <ConnectionProvider endpoint={endpoint}>
